@@ -607,33 +607,34 @@ footer {
          f r o m   {   t r a n s f o r m :   t r a n s l a t e X ( 0 ) ;   } 
          t o   {   t r a n s f o r m :   t r a n s l a t e X ( - 5 0 % ) ;   } 
  } 
- .ticker-container {
+/* التنسيق النهائي للشريط الأحمر */
+.ticker-container {
     width: 100%;
-    background-color: #ff0000 !important; /* اللون الأحمر */
-    color: white !important;
-    overflow: hidden !important;
-    white-space: nowrap !important; /* هذا السطر هو اللي بيمنعهم يترصوا فوق بعض */
-    padding: 15px 0;
+    background-color: #ff0000 !important; /* أولاً: اللون الأحمر */
+    color: white;
+    overflow: hidden; /* ثالثاً: هذا السطر يمنع الصفحة من الحركة والاهتزاز */
+    white-space: nowrap;
+    padding: 12px 0;
     direction: rtl;
-    position: relative;
-    display: block !important;
+    position: relative; /* لضمان استقرار الشريط */
 }
 
 .ticker-wrapper {
-    display: inline-block !important;
-    white-space: nowrap !important;
-    animation: marquee 20s linear infinite;
+    display: inline-block;
+    padding-left: 100%;
+    /* ثانياً: غيرت الرقم لـ 45s عشان تكون الحركة أبطأ وأريح للعين */
+    animation: marquee 45s linear infinite; 
 }
 
 .ticker-wrapper span {
-    display: inline-block !important;
-    padding: 0 50px; /* مسافة بين الجمل */
+    display: inline-block;
+    padding: 0 40px;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
+/* حركة الأنميشن المعدلة */
 @keyframes marquee {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
- 
