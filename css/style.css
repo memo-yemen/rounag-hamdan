@@ -607,33 +607,33 @@ footer {
          f r o m   {   t r a n s f o r m :   t r a n s l a t e X ( 0 ) ;   } 
          t o   {   t r a n s f o r m :   t r a n s l a t e X ( - 5 0 % ) ;   } 
  } 
- /* تنسيق الشريط الأحمر الجديد */
-.ticker-container {
+ .ticker-container {
     width: 100%;
-    background-color: #ff0000; /* اللون الأحمر */
-    color: white;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 10px 0;
-    direction: rtl; 
+    background-color: #ff0000 !important; /* اللون الأحمر */
+    color: white !important;
+    overflow: hidden !important;
+    white-space: nowrap !important; /* هذا السطر هو اللي بيمنعهم يترصوا فوق بعض */
+    padding: 15px 0;
+    direction: rtl;
+    position: relative;
+    display: block !important;
 }
 
 .ticker-wrapper {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 30s linear infinite;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    animation: marquee 20s linear infinite;
 }
 
 .ticker-wrapper span {
-    display: inline-block;
-    padding: 0 30px;
+    display: inline-block !important;
+    padding: 0 50px; /* مسافة بين الجمل */
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
-/* حركة الأنميشن */
 @keyframes marquee {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
- 
  
