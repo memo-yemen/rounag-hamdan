@@ -557,7 +557,8 @@ footer {
          f r o m   {   t r a n s f o r m :   t r a n s l a t e X ( 0 ) ;   } 
          t o   {   t r a n s f o r m :   t r a n s l a t e X ( 5 0 % ) ;   } 
  } 
-  
+ 
+ 
  
  / *   M o d e r n   I n f i n i t e   S c r o l l e r   -   I n s t a n t   A p p e a r a n c e   * / 
  . m o d e r n - a n n o u n c e m e n t - b a r   { 
@@ -606,5 +607,33 @@ footer {
          f r o m   {   t r a n s f o r m :   t r a n s l a t e X ( 0 ) ;   } 
          t o   {   t r a n s f o r m :   t r a n s l a t e X ( - 5 0 % ) ;   } 
  } 
-  
+ /* تنسيق الشريط الأحمر الجديد */
+.ticker-container {
+    width: 100%;
+    background-color: #ff0000; /* اللون الأحمر */
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    direction: rtl; 
+}
+
+.ticker-wrapper {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+}
+
+.ticker-wrapper span {
+    display: inline-block;
+    padding: 0 30px;
+    font-weight: bold;
+}
+
+/* حركة الأنميشن */
+@keyframes marquee {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+ 
  
